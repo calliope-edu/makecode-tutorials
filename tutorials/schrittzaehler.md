@@ -1,6 +1,6 @@
 # Schrittzähler
 
-## Introduction @unplugged
+## Einführung @unplugged
 
 In diesem Tutorial programmieren wir einen Schrittzähler (Pedometer) mit dem eingebauten
 Lagesensor des Calliope mini. 
@@ -22,8 +22,8 @@ Als erstes erstellen wir eine Variable, um die Schritte zu hoch zu zählen.
 
 Gehen wir davon aus, dass du deinen Calliope mini am Fuß befestigt hast, dann schüttelst
 du ihn jedes Mal, wenn du einen Schritt machst. Mit dem Ereignis ``||input.Wenn geschüttelt||``
-können wir so den Schritt (in den meisten Fällen) messen. ``||variables.
-Ändere||`` die Variable ``||variables.Schritte||`` um 1, wenn der mini geschüttelt wird.
+können wir so den Schritt (in den meisten Fällen) messen.
+ ``||variables.Variable||`` Ändere die Variable ``||variables.Schritte||`` um 1, wenn der mini geschüttelt wird.
 
 ```blocks
 let Schritte = 0
@@ -52,7 +52,7 @@ basic.forever(function () {
 })
 ```
 
-## Step 3
+## Step 4
 
 ### Beschleunigungsensor
 
@@ -75,7 +75,7 @@ basic.forever(function () {
 
 ```
 
-## Step 3
+## Step 5
 
 ### Bedingung für Beschleunigung
 
@@ -99,7 +99,7 @@ basic.forever(function () {
 })
 ```
 
-## Step 3
+## Step 6
 
 ### Größe der Beschleunigung
 
@@ -120,7 +120,7 @@ basic.forever(function () {
 })
 ```
 
-## Step 3
+## Step 7
 
 ### Anzeige der Schritte
 
