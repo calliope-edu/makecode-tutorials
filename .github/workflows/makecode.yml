@@ -4,26 +4,26 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [8.x]
-
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: npm install
-        run: |
-          npm install -g pxt
-          pxt target calliopemini
-      - name: build
-        run: |
-          pxt install
-          pxt build --cloud
+          node-version: 18
+
+      - name: Install PXT
+        run: npm install -g pxt
+
+      - name: Select target
+        run: pxt target calliopemini
+
+      - name: Install dependencies
+        run: pxt install
+
+      - name: Build
+        run: pxt build --cloud
         env:
           CI: true
